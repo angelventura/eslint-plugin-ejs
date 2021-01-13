@@ -56,7 +56,7 @@ $ npm test
 ```
 
 ## Why a new version ?
-This source code come originally from: https://www.npmjs.com/package/eslint-plugin-ejs/v/0.0.2, no Github repository found for this code.
+This source code come originally from: https://www.npmjs.com/package/eslint-plugin-ejs/v/0.0.2, no Github repository found for this code. I saw similar code here: https://github.com/jtmthf/eslint-plugin-ejs
 
 Now I'm moving from lint to ESlint And I'm having issues with code like
 ```
@@ -66,5 +66,12 @@ Now I'm moving from lint to ESlint And I'm having issues with code like
 
 because tags <%- -%> are not supported by all the ESlint-plugin-ejs I found. This is the reason why I'm creating forking a new module.
 
+Similar projects I'm currenly watching: 
+* https://github.com/overlookmotel/eslint-plugin-ejs-js
+* https://github.com/silesia-corporation/eslint-plugin-ejs
+* https://github.com/jtmthf/eslint-plugin-ejs
+
+
+## New Tags
 
 Here the tags currenly supported: '<%= ', '<% ', ' %>', '<%- ', ' -%>','<%', '%>'
