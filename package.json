@@ -1,6 +1,6 @@
 {
   "name": "@angelventura/eslint-plugin-ejs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parses out ejs declarations found in js files",
   "keywords": [
     "eslint",
@@ -26,8 +26,7 @@
     "lib": "lib",
     "test": "tests"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angelventura/eslint-plugin-ejs.git"
