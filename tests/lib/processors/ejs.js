@@ -34,7 +34,7 @@ describe('preprocess', function() {
 
   it('handles unusual input', function() {
     var input = 'var <$= identifier &> = 4;\n <@ doSomething(); *>';
-    expect(processor.preprocess(input)).to.deep.equal(['var <$= identifier &> = 4;\n <@ doSomething(); *>']);
+    expect(processor.preprocess(input)).to.deep.equal(['var <$= identifier &> = 4;\n <@ doSomething(); *>']); 
   });
 });
 
