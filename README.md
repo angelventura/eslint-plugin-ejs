@@ -54,3 +54,17 @@ Add `ejs` to the plugins section of your `.eslintrc` configuration file. You can
 ```
 $ npm test
 ```
+
+## Why a new version ?
+This source code come originally from: https://www.npmjs.com/package/eslint-plugin-ejs/v/0.0.2, no Github repository found for this code.
+
+Now I'm moving from lint to ESlint And I'm having issues with code like
+```
+<%- include('../snippet/js-head.ejs', {fileName: currentName+'.js'}); -%>
+
+```
+
+because tags <%- -%> are not supported by all the ESlint-plugin-ejs I found. This is the reason why I'm creating forking a new module.
+
+
+Here the tags currenly supported: '<%= ', '<% ', ' %>', '<%- ', ' -%>','<%', '%>'
