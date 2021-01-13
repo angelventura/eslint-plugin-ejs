@@ -27,9 +27,9 @@ describe('preprocess', function() {
     expect(processor.preprocess(input)).to.deep.equal(['var identifier = 4;\n doSomething();']);
   });
 
-  it('requires spacing inside markers', function() {
-    var input = 'var <%=identifier%> = 4;\n <%doSomething();%>';
-    expect(processor.preprocess(input)).to.deep.equal(['var <%=identifier%> = 4;\n <%doSomething();%>']);
+  it('We do no more require spacing inside markers', function() {
+    var input = 'var <%= identifier%> = 4;\n <%doSomething();%>';
+    expect(processor.preprocess(input)).to.deep.equal(['var identifier = 4;\n doSomething();']);
   });
 
   it('handles unusual input', function() {
