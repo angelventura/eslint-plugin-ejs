@@ -12,6 +12,13 @@ describe('preprocess', function() {
     expect(processor.preprocess(input)).to.deep.equal(['var identifier = 4;']);
   });
 
+  it('removes <%# comments %>', function() {
+    var input = "Some lines of text\n# Not a comment block\n<%# I'm a comment %>\n<%= <%# I'm an embedded comment %>I'm not a comment%>\n<%# I'm another comment %>\nComments<%# like this%> should be removed";
+    var output = "Some lines of text\n# Not a comment block\n\nI'm not a comment\n\nComments should be removed";
+
+    expect(processor.preprocess(input)).to.deep.equal([output]);
+  });
+
   it('removes <% markers', function() {
     var input = 'var <% identifier = 4;';
     expect(processor.preprocess(input)).to.deep.equal(['var identifier = 4;']);
