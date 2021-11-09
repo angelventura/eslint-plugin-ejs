@@ -1,6 +1,6 @@
 {
   "name": "@angelventura/eslint-plugin-ejs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Parses out ejs declarations found in js files",
   "main": "lib/index.js",
   "directories": {
